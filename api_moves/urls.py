@@ -1,7 +1,15 @@
-from django.urls import path
-from .views import *
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
+from . import views
+
+
+app_name = "api_moves"
+
+router = DefaultRouter()
+router.register('', views.TodosViewSetApiView)
 
 urlpatterns = [
-    path('rrr', csv_to_db),
+    path('', include(router.urls)),
+    
 ]
