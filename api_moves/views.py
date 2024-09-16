@@ -1,3 +1,4 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import viewsets, status
 from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import PageNumberPagination
@@ -10,7 +11,12 @@ from .serializers import MovieSerializer
 
 
 class MoviesListApiView(APIView):
-
+    
+    @extend_schema(  # برای سواگر هست
+        request=MovieSerializer,
+        responses={201: MovieSerializer},
+    )
+    
     def get(self, request: Request):
         """
         get all movies (5 on each page) \n
@@ -43,7 +49,7 @@ class MoviesDetailApiView(APIView):
 
     def get(self, request: Request, movie_id: int):
         """
-        get movie
+        get movie with this ID
         """
         movie = self.get_object(movie_id)
         serializer = MovieSerializer(movie)
@@ -51,7 +57,7 @@ class MoviesDetailApiView(APIView):
     
     def put(self, request: Request, movie_id: int):
         """
-        edit movie \n
+        edit movie with this ID \n
         In the body of the request, put a json with the format of jsons received from the server
         """
         movie = self.get_object(movie_id)
@@ -63,7 +69,7 @@ class MoviesDetailApiView(APIView):
     
     def delete(self, request: Request, movie_id: int):
         """
-        del movie
+        del movie with this ID
         """
         movie = self.get_object(movie_id)
         movie.delete()
