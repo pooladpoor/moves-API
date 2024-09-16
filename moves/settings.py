@@ -127,11 +127,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',  # نوع صفحه بندی
-    'PAGE_SIZE': 5,  # تو هر صفحه چند تا باشه
 
+REST_FRAMEWORK = {
     # برای سواگر هست
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
 }

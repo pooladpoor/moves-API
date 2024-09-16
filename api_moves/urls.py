@@ -6,10 +6,8 @@ from . import views
 
 app_name = "api_moves"
 
-router = DefaultRouter()
-router.register('', views.TodosViewSetApiView)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    
+    path('', views.MoviesListApiView.as_view()),
+    path('/<int:movie_id>', views.MoviesDetailApiView.as_view()),
 ]
