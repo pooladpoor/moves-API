@@ -137,10 +137,18 @@ REST_FRAMEWORK = {
 }
 # برای سواگر هست
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
+    'TITLE': 'Movies API',
+    'DESCRIPTION': """
+        This api performs the following operations on 1000 movies that are in the database:
+        
+        1) The list of movies is divided into pages, each page contains 5 movies
+        2) Get the details of each movie using its ID
+        3) Edit the information of each movie
+        4) Delete any video
+        5) Adding a new movie to the database
+    """,
     'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
+    'SERVE_INCLUDE_SCHEMA': True,
     # OTHER SETTINGS
 }
 
