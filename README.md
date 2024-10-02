@@ -19,7 +19,7 @@
 git clone https://github.com/pooladpoor/moves-API.git
 ```
 ```bash
-cd moves
+cd moves-API
 ```
 
 ### 2. اجرای پروژه 
@@ -31,3 +31,7 @@ docker build -t moves-api:latest .
 ```bash
 docker run -p 8000:8000 moves-api 
 ```
+### 3.استفاده کنید
+
+- [پنل ادمین](http://localhost:8000/admin)
+- [داکیومنت](http://localhost:8000/api/schema/swagger) 
