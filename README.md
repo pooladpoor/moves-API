@@ -31,7 +31,10 @@ docker build -t moves-api:latest .
 ```bash
 docker run -p 8000:8000 moves-api 
 ```
-### 3.استفاده کنید
+## 3.استفاده کنید
 
+- [داکیومنت](http://localhost:8000/api/schema/swagger)
+- 
 - [پنل ادمین](http://localhost:8000/admin)
-- [داکیومنت](http://localhost:8000/api/schema/swagger) 
+###### username : pooladpoor
+###### password : 1234
