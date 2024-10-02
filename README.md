@@ -1,5 +1,33 @@
+
+
+# api moves
+
 اطلاعات 1000 فیلم سینمایی در این api وجود دارد که میتوانید از آن استفاده کنید
 
+## پیش‌نیازها
 
-بعد از اجرای پروژه روی لوکال هاست از طریق لینک زیر میتوانید داکیومنت جهت استفاده از api رو ببینید
-http://localhost:8000/api/schema/swagger/
+برای اجرای این پروژه، ابتدا باید موارد زیر را بر روی سیستم خود نصب داشته باشید:
+
+- [Docker](https://www.docker.com/get-started)
+
+## مراحل اجرای پروژه
+
+### 1. کلون کردن مخزن (Repository)
+ابتدا مخزن پروژه را کلون کنید:
+
+```bash
+git clone https://github.com/pooladpoor/moves-API.git
+```
+```bash
+cd moves
+```
+
+### 2. اجرای پروژه 
+ابتدا کانتینر را بسازید :
+```bash
+docker build -t moves-api:latest .   
+```
+بعد آن را اجرا کنید :
+```bash
+docker run -p 8000:8000 moves-api 
+```

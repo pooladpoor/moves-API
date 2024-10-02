@@ -9,5 +9,5 @@ app_name = "api_moves"
 
 urlpatterns = [
     path('', views.MoviesListApiView.as_view()),
-    path('/<int:movie_id>', views.MoviesDetailApiView.as_view()),
+    path('<int:movie_id>/', views.MoviesDetailApiView.as_view()),
 ]
